@@ -10,3 +10,16 @@ emergency_decision
 ### module_2为应急辅助决策模型的伪代码:  [<代码链接>](https://github.com/loyalty-fox/emergency_decision/blob/main/module_2.py)
 模型的整体设计流程如下图：<br>
 <div align=center><img src="https://github.com/loyalty-fox/emergency_decision/assets/56210508/0f813d24-5f48-427d-a8e0-7ee725d3ffcf" width="300" height="450" /></div>
+
+# 引用
+```bibtex
+@misc{soft-cite801Q,
+  author     = {Hao Chen},
+  title      = {{emergency decision}},
+  month      = October,
+  year       = 2023,
+  doi        = {10.5281/zenodo.10016336},
+  version    = {1.0},
+  url        = {https://github.com/loyalty-fox/emergency_decision}
+}
+```
