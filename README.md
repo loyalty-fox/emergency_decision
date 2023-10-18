@@ -2,7 +2,7 @@ emergency_decision
 =======
 伪代码保存
 
-### module_1为构建知识图谱时批量导入关系与节点进neo4j数据库的伪代码
+### module_1为构建知识图谱时批量导入关系与节点进neo4j数据库的伪代码[链接](https://github.com/loyalty-fox/emergency_decision/blob/main/module_1.py)
 输入数据：节点.csv、关系.csv
 
 ### module_2为应急辅助决策模型的伪代码
