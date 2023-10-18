@@ -1,3 +1,5 @@
+from py2neo import Node,Relationship,Graph,Path,Subgraph,data
+# 本地neo4j数据库网址，全局用户名，自己设置的密码
 Connect to the database
 
 Function cql_transfer(disaster_type_label)
