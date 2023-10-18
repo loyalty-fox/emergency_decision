@@ -15,7 +15,7 @@ with open(nodes.csv):
 # Save the node to the graph
   graph.create(node)
 
-# 导入关系
+# Import Relationship
 with open(relationship.csv):
   For each line in csv:
     data = line.split_by_comma
