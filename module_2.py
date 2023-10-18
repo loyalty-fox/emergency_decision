@@ -4,7 +4,7 @@ from py2neo import Node,Relationship,Graph,Path,Subgraph,data
 graph = Graph("bolt://localhost:7687", auth=("neo4j", "password"))
 
 Function cql_transfer(disaster_type_label)
-    # Execute cql_0 to obtain indicators num and loss
+    # Execute cql_0 to obtain indicators multi-dimensional parameter
     cql_0 = 'MATCH node where node.label = "disaster_type_label" return RETURN keys(node).'
     parm_1, parm_2 = run(cql_0)
     
@@ -28,6 +28,6 @@ answers = run(my_sql).data()
 # Convert the query result into readable reference information
 print("\n#############################################\n")
 print("The {} level is:".format(label) + answers[0]['n.level'])
-print("Disaster grading criteria reference:" + answers[0]['n.reference document'])
-print("Number of rescue personnel to dispatch:" + answers[0]['m.personnel dispatch'])
-print("Personnel dispatch criteria reference:" + answers[0]['m.reference document'])
+print("Disaster grading criteria reference:" + answers[0]['n.reference_file'])
+print("Number of rescue personnel to dispatch:" + answers[0]['m.personnel_dispatch'])
+print("Personnel dispatch criteria reference:" + answers[0]['m.reference_file'])
