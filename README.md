@@ -13,7 +13,7 @@ emergency_decision
 
 ### 引用
 ```bibtex
-@misc{soft-cite801Q,
+@misc{loyalty-fox,
   author     = {Hao Chen},
   title      = {{emergency decision}},
   month      = October,
