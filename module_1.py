@@ -1,15 +1,21 @@
 from py2neo import Node,Relationship,Graph,Path,Subgraph,data
 
-# Connect to the local database
-graph = Graph("bolt://localhost:7474", auth=("neo4j", "password"))
+# Connect to the local database Neo4j
+graph = Graph("bolt://localhost:7687", auth=("neo4j", "password"))
 
 Function cql_transfer(disaster_type_label)
-    Construct query cql0 to retrieve relevant indicators m and n based on the user's input label
-    Execute cql0 to obtain indicators m and n
-    Prompt the user to input measurement data for m and n
-    Divide m and n into ranges and convert them into corresponding strings
-    Construct a fuzzy query cql_1 to find nodes related to disaster level based on the ranges, using the WITH keyword to retain those nodes (refer to relevant documentation)
-    Construct a fuzzy query cql_2 to query the level of those nodes and find related rescue protocol nodes, returning personnel dispatch indicators (refer to relevant documentation)
+    # Execute cql_0 to obtain indicators num and loss
+    cql_0 = 'MATCH node where node.label = "disaster_type_label" return RETURN keys(node).'
+    parm_1, parm_2 = run(cql_0)
+    
+    # Remind the user to enter measurement data
+    parm_1 = input("Enter the parm_1:")
+    parm_2 = input("Enter the parm_2:")
+    
+    # Construct a fuzzy query cql_1 
+    cql_1 = 'MATCH (n:ClassificationCriteria) where n.name=~".*{}.*" and n.parm1="{}" and n.parm2 ="{}" WITH n '.format(disaster_type_label, parm_1, parm_2)
+    # Construct a fuzzy query cql_2 
+    cql_2 = 'MATCH (m:RescueGuidelines) where m.disaster_level=n.level return n.level,n.reference_file,m.personnel_dispatch,m.reference_file'
     cql = cql_1 + cql_2
     Return cql
 
