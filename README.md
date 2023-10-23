@@ -2,7 +2,7 @@ emergency_decision
 =======
 项目相关伪代码
 
-### module_1为构建知识图谱时批量导入csv进数据库的伪代码:  [<代码链接>](https://github.com/loyalty-fox/emergency_decision/blob/main/module_1.py)
+### module_1为构建知识图谱时批量导入csv进数据库的伪代码:  [<代码链接>](https://github.com/loyalty-fox/emergency_decision/blob/main/module_1)
 输入数据：节点.csv、关系.csv <br>
 主要使用的工具包：py2neo <br>
 数据库：neo4j <br>
